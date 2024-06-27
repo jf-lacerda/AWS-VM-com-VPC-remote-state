@@ -5,9 +5,8 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_
 https://developer.hashicorp.com/terraform/language/functions/file
 
 # Backend
- * Example Configuration!
- 
- [alt text](image.png)
+
+ * Example Configuration![alt text](image.png)
 
 # Create kay-pair
  $ ssh-keygen -f aws-key
