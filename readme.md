@@ -1,4 +1,4 @@
-# AWS VM com VPC utilizando remote state no Terraform
+# VM na AWS com VPC utilizando remote state no Terraform
 Este projeto fornece um exemplo de como criar uma máquina virtual (VM) na AWS dentro de uma VPC utilizando o Terraform, com o estado armazenado remotamente.
 
 # Visão Geral
@@ -28,20 +28,13 @@ Certifique-se de configurar o backend remoto corretamente no arquivo backend.tf:
 
 ![alt text](image-1.png)
 
-# Variáveis
-Preencha as variáveis necessárias no arquivo variables.tf ou utilize um arquivo terraform.tfvars para defini-las. 
-
-Exemplo:
-
-![alt text](image-2.png)
-
 # Uso
 
- * Crie uma chave de acesso SSH no terminal.
+ * Crie uma chave de acesso.
  $ ssh-keygen -f aws-key
 
 1 - Clone o repositório:
-$ git clone https://github.com/jf-lacerda/AWS-VM-com-VPC-remote-state.git
+$ git clone https://github.com/jf-lacerda/Remote_state-with-aws_vm_vpc
 cd AWS-VM-com-VPC-remote-state
 
 2 - Inicialize o Terraform:
@@ -81,7 +74,4 @@ https://developer.hashicorp.com/terraform/language/settings/backends/s3#data-sou
 
 # Resource: aws_instance
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#argument-reference
-
-# Create kay-pair
- $ ssh-keygen -f aws-key
 
