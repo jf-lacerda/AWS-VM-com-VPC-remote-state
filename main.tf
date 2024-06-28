@@ -1,5 +1,6 @@
 terraform {
   required_version = ">= 1.3.0"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -29,7 +30,7 @@ data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
     bucket = "joaolacerda-terraform001"
-    key    = "valaws-vm/terraform.tfstateue"
+    key    = "aws-vpc/terraform.tfstate"
     region = "us-east-1"
   }
 }
