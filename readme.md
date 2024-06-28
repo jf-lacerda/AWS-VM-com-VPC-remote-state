@@ -10,7 +10,6 @@ Este repositório contém a configuração do Terraform necessária para provisi
 
 # Estrutura do Repositório
 * main.tf: Define os recursos principais do projeto.
-* variables.tf: Define as variáveis de entrada para o projeto.
 * outputs.tf: Define as saídas que serão exibidas após a execução do Terraform.
 * backend.tf: Configura o estado remoto.
 
