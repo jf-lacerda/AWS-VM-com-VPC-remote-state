@@ -1,21 +1,3 @@
-# Resource: aws_key_pair
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair
-
-# file Function
-https://developer.hashicorp.com/terraform/language/functions/file
-
-# Backend
-https://developer.hashicorp.com/terraform/language/settings/backends/s3#data-source-configuration
-
- * Example Configuration![alt text](image.png)
-
-# Create kay-pair
- $ ssh-keygen -f aws-key
-
-# Resource: aws_instance
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#argument-reference
-
-
 # AWS VM com VPC utilizando remote state no Terraform
 Este projeto fornece um exemplo de como criar uma máquina virtual (VM) na AWS dentro de uma VPC utilizando o Terraform, com o estado armazenado remotamente.
 
@@ -54,4 +36,52 @@ Exemplo:
 ![alt text](image-2.png)
 
 # Uso
-Clone o repositório:
+
+ * Crie uma chave de acesso SSH no terminal.
+ $ ssh-keygen -f aws-key
+
+1 - Clone o repositório:
+$ git clone https://github.com/jf-lacerda/AWS-VM-com-VPC-remote-state.git
+cd AWS-VM-com-VPC-remote-state
+
+2 - Inicialize o Terraform:
+$ terraform init
+
+3 - Planeje a infraestrutura:
+$ terraform plan
+
+4 - Aplique as mudanças para criar a infraestrutura:
+$ terraform apply
+
+5 - Para destruir a infraestrutura, use:
+$ terraform destroy
+
+# Problemas Comuns
+Erro: Unable to find remote state
+Se você encontrar o erro Unable to find remote state, verifique:
+
+As configurações do backend no backend.tf.
+O workspace atual usando terraform workspace show.
+As permissões AWS para acessar o bucket S3.
+Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+# Licença
+Este projeto é licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+
+
+# Resource: aws_key_pair
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair
+
+# file Function
+https://developer.hashicorp.com/terraform/language/functions/file
+
+# Backend
+https://developer.hashicorp.com/terraform/language/settings/backends/s3#data-source-configuration
+
+# Resource: aws_instance
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#argument-reference
+
+# Create kay-pair
+ $ ssh-keygen -f aws-key
+
